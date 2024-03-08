@@ -12,6 +12,7 @@ class Box {
 }
 
 class MetalBox extends Box {
+    use HasSmell;
     public $material = 'Metal';
     public $weight;
 
@@ -20,7 +21,19 @@ class MetalBox extends Box {
     }
 }
 
+class Animal {
+    use HasSmell;
+}
 
+trait HasSmell {
+    public $smell;
+    public function sniff(){
+        if($this->smell !== 'Bad') {
+            return 'Fine';
+        }
+        return 'Bad';
+    }
+}
 
 $box1 = new Box();
 var_dump($box1);
