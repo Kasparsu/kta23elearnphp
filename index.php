@@ -11,16 +11,18 @@ class Box {
     }
 }
 
+class MetalBox extends Box {
+    public $material = 'Metal';
+    public $weight;
 
-$num1 = 4;
-$num2 = $num1;
-$num2 = 7;
-var_dump($num1, $num2);
+    public function volume(){
+        return $this->width * $this->heigth * $this->length;
+    }
+}
+
 
 
 $box1 = new Box();
-$box1->heigth = 4;
-$box2 = clone $box1;
-$box2->heigth = 7;
-var_dump($box1, $box2);
-$box1->describe();
+var_dump($box1);
+$metalBox1 = new MetalBox();
+var_dump($metalBox1);
