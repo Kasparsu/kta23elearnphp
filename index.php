@@ -11,17 +11,16 @@ class Box {
     }
 }
 
-$box1 = new Box();
-$box1->width = 1;
-$box1->heigth = 2;
-$box1->length = 3;
-$box1->material = 'Wood';
-var_dump($box1);
 
-$box2 = new Box();
-$box2->width = 5;
-$box2->heigth = 6;
-$box2->length = 7;
-$box2->material = 'Metal';
-var_dump($box2);
-var_dump($box1);
+$num1 = 4;
+$num2 = $num1;
+$num2 = 7;
+var_dump($num1, $num2);
+
+
+$box1 = new Box();
+$box1->heigth = 4;
+$box2 = clone $box1;
+$box2->heigth = 7;
+var_dump($box1, $box2);
+$box1->describe();
