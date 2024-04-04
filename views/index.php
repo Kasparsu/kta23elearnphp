@@ -1,7 +1,3 @@
-<?php
-$name = 'Kaspar';
-$fruits = ['Apple', 'Banana', 'Cherry', 'Pear'];
-?>
 <?php include 'partials/header.php'; ?>
     <h1>Hello <?=$name?></h1>
     <ul>
