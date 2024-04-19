@@ -8,7 +8,7 @@ class PublicController {
         //var_dump($_COOKIE);
         session_start(['cookie_httponly' => true]);
         //$_SESSION['secret'] = 'shh';
-        var_dump($_SESSION);
+        dump($_SERVER);
         $name = htmlspecialchars($_GET['name']) ?? 'Nameless';        
         $fruits = ['Apple', 'Banana', 'Cherry', 'Pear'];
         include 'views/index.php';
