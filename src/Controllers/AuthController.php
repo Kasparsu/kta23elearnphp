@@ -20,7 +20,6 @@ class AuthController {
         $pass = password_hash($_POST['password'], PASSWORD_BCRYPT);
         $sql = "INSERT INTO users (email, password)
         VALUES ('$email', '$pass')";
-        // use exec() because no results are returned
         $conn->exec($sql);
         
     }
