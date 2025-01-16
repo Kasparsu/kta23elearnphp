@@ -2,12 +2,9 @@
 namespace App\Controllers;
 
 class PublicController {
-    public const DAY = 60*60*24; 
+
     public function index(){
-        //setcookie('mycookie', 'delicious', time()+self::DAY*30);
-        //var_dump($_COOKIE);
         session_start(['cookie_httponly' => true]);
-        //$_SESSION['secret'] = 'shh';
         $age = 31;
         $name = htmlspecialchars($_GET['name']) ?? 'Nameless';        
         $fruits = ['Apple', 'Banana', 'Cherry', 'Pear'];
@@ -16,8 +13,6 @@ class PublicController {
     
     public function page1(){
         session_start();
-        //$_SESSION['secret'] = 'shh';
-        var_dump($_SESSION);
         include 'views/page1.php';
     }
     
