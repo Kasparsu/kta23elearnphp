@@ -1,5 +1,5 @@
 <?php include 'partials/header.php'; ?>
-    <h1>Hello <?=$name?></h1>
+    <h1>Hello <?=$name?> you are <?=$age?> old!</h1>
     <form>
         <input type="text" name="name">
         <input type="number" name="age">
